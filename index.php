@@ -10,7 +10,6 @@
 
 
 <!DOCTYPE html>
-<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -20,13 +19,13 @@
 </head>
 <body>
     
-   <?php if(!isset($logged)):?>
+   <?php if(!isset($_SESSION['logged'])):?>
         <?php
             require_once('./access/login.php')    
         ?>
     <?php else:?>
         <div class="container">
-            <a class="panel-access" href="./access/panel.php">Acessar Painel</a>
+            <a class="panel-access" href="/panel/access/panel.php">Acessar Painel</a>
         </div>
     <?php endif?>
 </body>

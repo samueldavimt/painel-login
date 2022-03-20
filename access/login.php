@@ -1,5 +1,13 @@
 <?php
-        require_once("./access/validation.php");
+        require_once("validation.php");
+
+       
+        $logins = [
+            ['Id'=>1, 'LevelAccess'=>'adm', 'UserName'=>'Davi', 'Email'=>'davi@system.com', 'Password'=>'mint'],
+
+            ['Id'=>2, 'LevelAccess'=>'user', 'UserName'=>'Julia', 'Email'=>'julia@system.com', 'Password'=>'ubuntu']
+        ];
+
 
         $msgError = null;
         if(isset($_POST['Login'])){
@@ -21,12 +29,23 @@
                     $msgError = $alerts[0];
                 }else{
                     
+                    foreach($logins as $key => $login){
+                        $loginEmail = $login['Email'];
+                        $loginPassword = $login['Password'];
+                        
+                        if($loginEmail == $email && $loginPassword == $password){
+                            $_SESSION['logged'] = true;
+                            $_SESSION['username'] = $login['UserName'];
+                            $_SESSION['levelaccess'] = $login['LevelAccess'];
+                            header('Location: /panel/index.php');
+                            exit;
+                        }else{
+                            $msgError = 'Erro: Email ou Senha Inválido(os)';
+                        }
+
+                    }
                 }
-                
-
-               
-
-                
+ 
             }
         }
 
@@ -40,7 +59,7 @@
             <p><?=$msgError?></p>
         </div>
     <?php endif?>
-    <form action="./index.php" method="POST">
+    <form action="/panel/index.php" method="POST">
 
         <input type="text" name="email" placeholder="Seu Email" autocomplete="off">
         

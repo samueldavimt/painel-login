@@ -1,0 +1,15 @@
+.container h3{
+    margin-top: 10px;
+}
+.links{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    align-items: center;
+}
+.links a{
+    font-size: 20px;
+    color: #0079e5;
+    margin: 0px 20px;
+}
