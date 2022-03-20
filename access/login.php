@@ -1,7 +1,6 @@
 <?php
         require_once("validation.php");
 
-       
         $logins = [
             ['Id'=>1, 'LevelAccess'=>'adm', 'UserName'=>'Davi', 'Email'=>'davi@system.com', 'Password'=>'mint'],
 

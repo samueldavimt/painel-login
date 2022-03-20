@@ -13,8 +13,9 @@
 
     function checkSessionAdm(){
         if($_SESSION['levelaccess'] != 'adm'){
-            header('Location: /panel/index.php');
-            exit;
+            return false;
+        }else{
+            return true;
         }
     }
 
