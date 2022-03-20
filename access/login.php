@@ -1,8 +1,9 @@
 <?php
+
         require_once("validation.php");
 
         $logins = [
-            ['Id'=>1, 'LevelAccess'=>'adm', 'UserName'=>'Davi', 'Email'=>'davi@system.com', 'Password'=>'mint'],
+            ['Id'=>1, 'LevelAccess'=>'adm', 'UserName'=>'Davi', 'Email'=>'davi@system.com', 'Password'=>'arch'],
 
             ['Id'=>2, 'LevelAccess'=>'user', 'UserName'=>'Julia', 'Email'=>'julia@system.com', 'Password'=>'ubuntu']
         ];
@@ -58,6 +59,7 @@
             <p><?=$msgError?></p>
         </div>
     <?php endif?>
+    
     <form action="/panel/index.php" method="POST">
 
         <input type="text" name="email" placeholder="Seu Email" autocomplete="off">

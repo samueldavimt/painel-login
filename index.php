@@ -1,6 +1,5 @@
 <?php
 
-    require_once('./templates/header.php');
 
     if(!isset($_SESSION)){
         session_start();
@@ -18,6 +17,7 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <?php require_once('./templates/header.php');?>
     
    <?php if(!isset($_SESSION['logged'])):?>
         <?php
