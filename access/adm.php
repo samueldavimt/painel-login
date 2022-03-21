@@ -1,6 +1,7 @@
 <?php
 
     require_once("checkSession.php");
+    
     checkSession();
 
     $validateLevelAccess = checkSessionAdm();

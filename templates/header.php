@@ -17,7 +17,6 @@
 
 <header>
     <div class="header-container">
-        <h2>LOGO</h2>
         <nav>
             <ul>
                 <li><a href="/panel/index.php">Home</a></li>
